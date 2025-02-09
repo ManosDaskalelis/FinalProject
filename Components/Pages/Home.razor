@@ -93,7 +93,7 @@ else
     private IEnumerable<Product> Products = new List<Product>();
     private IEnumerable<Product> FilteredProducts = new List<Product>();
     private IEnumerable<Category> Categories = new List<Category>();
-    private bool IsProcessing { get; set; } = false;
+    private bool IsProcessing { get; set; } = true;
     private int catId = 0;
     private string searchInput = "";
 
@@ -101,11 +101,10 @@ else
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-        if (firstRender && !IsProcessing)
+        if (firstRender && IsProcessing)
         {
-            IsProcessing = true;
-            await LoadProducts();
             IsProcessing = false;
+            await LoadProducts();
             StateHasChanged();
 
         }
