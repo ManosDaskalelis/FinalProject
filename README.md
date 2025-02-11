@@ -34,7 +34,6 @@ Ensure you have the following installed before running the project:
 ### 1. Clone the Repository
 ```sh
 git clone <repository_url>
-cd blazor-eshop
 ```
 
 ### 2. Configure Database
@@ -57,7 +56,7 @@ Execute the following command to start the Blazor server:
 ```sh
 dotnet run
 ```
-The application will be available at `https://localhost:5001` or `http://localhost:5000`.
+The application will be available at `https://localhost:7038` or `http://localhost:5094`.
 
 ---
 
